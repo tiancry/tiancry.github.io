@@ -1,0 +1,18 @@
+/* 统一设置所有页面的首行标题的样式 */
+h1 {
+  font-size: 24px; /* 字体大小 */
+  color: #333; /* 文字颜色 */
+  font-weight: bold; /* 文字粗细 */
+  margin-top: 20px; /* 顶部外边距 */
+  margin-bottom: 10px; /* 底部外边距 */
+  text-align: center; /* 文字居中 */
+}
+
+/* 统一设置所有页面第一段介绍文字的样式 */
+p:first-of-type {
+  font-size: 16px; /* 字体大小 */
+  color: #666; /* 文字颜色 */
+  margin-top: 10px; /* 顶部外边距 */
+  margin-bottom: 20px; /* 底部外边距 */
+  line-height: 1.5; /* 行高 */
+}

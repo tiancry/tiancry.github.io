@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>建筑研究页</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="/">我的博客</a>
+  </nav>
+
+  <div class="container mt-5">
+    <h1 class="mb-4">中国古建筑</h1>
+
+    <div class="accordion" id="architectureAccordion">
+      <div class="card">
+        <div class="card-header" id="religionHeader">
+          <h2 class="mb-0">
+            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#religion" aria-expanded="true" aria-controls="religion">
+              宗教建筑
+            </button>
+          </h2>
+        </div>
+
+        <div id="religion" class="collapse" aria-labelledby="religionHeader" data-parent="#architectureAccordion">
+          <div class="card-body">
+            <h3>佛寺</h3>
+            <p>唐朝政权的架构采用了中央集权制...</p>
+
+            <h3>道观</h3>
+            <p>科举制度，等...</p>
+
+            <h3>清真寺</h3>
+            <p>政治腐败，经济问题，等...</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header" id="woodenHeader">
+          <h2 class="mb-0">
+            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#wooden" aria-expanded="true" aria-controls="wooden">
+              大木作
+            </button>
+          </h2>
+        </div>
+
+        <div id="wooden" class="collapse" aria-labelledby="songHeader" data-parent="#historyAccordion">
+          <div class="card-body">
+            <h3>大木作</h3>
+            <p>柱、枋、斗栱、屋架等</p>
+
+            <h3>墙壁</h3>
+            <p>山墙</p>
+
+            <h3>屋顶</h3>
+            <p>屋顶有不同的形制，代表不同的等级。</p>
+
+            <h3>小木作</h3>
+            <p>色彩与装饰等...</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header" id="qinHeader">
+          <h2 class="mb-0">
+            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#qin" aria-expanded="true" aria-controls="qin">
+              秦朝
+            </button>
+          </h2>
+        </div>
+
+        <div id="qin" class="collapse" aria-labelledby="qinHeader" data-parent="#historyAccordion">
+          <div class="card-body">
+            <h3>政治架构</h3>
+            <p>秦朝是中国历史上第一个统一的多民族封建国家...</p>
+
+            <h3>晋升途径</h3>
+            <p>由国王直接任命各级官员...</p>
+
+            <h3>积弊</h3>
+            <p>重法轻德，人民处于极度的痛苦之中...</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <a href="/">返回主页</a>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>生活主题页</title>
+  <link rel="stylesheet" href="static/css/styles.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <style>
+    .timeline {
+      position: relative;
+      margin: 30px auto;
+      padding: 10px 0;
+      width: 90%;
+      overflow: hidden;
+    }
+
+    .timeline-item {
+      margin: 10px 0;
+      padding: 10px;
+      border-left: 2px solid #333;
+      display: flex;
+      align-items: center;
+    }
+
+    .timeline-item img {
+      max-width: 250px;
+      margin-right: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>生活主题</h1>
+  <p>这里是关于生活的文章</p>
+  <a href="/">返回主页</a>
+
+  <div class="container mt-4">
+    <h2>我的生活照片</h2>
+    <div class="timeline" id="timeline">
+    {% for photo in photos %}
+      <div class="timeline-item">
+        <img src="{{ url_for('static', filename='images/' ~ photo.filename) }}" class="img-fluid" alt="{{ photo.title }}">
+        <div>
+          <p><strong>{{ photo.filename[:8] }}</strong> - {{ photo.title }}</p>
+          <p>{{ photo.description }}</p>
+        </div>
+      </div>
+    {% endfor %}
+    </div>
+  </div>
+
+  <script>
+    const timeline = document.getElementById('timeline');
+    let isScrolling = false;
+
+    timeline.addEventListener('scroll', () => {
+      isScrolling = true;
+    });
+
+    setInterval(() => {
+      if (isScrolling) {
+        isScrolling = false;
+        moveItems();
+      }
+    }, 250);
+
+    function moveItems() {
+      const items = document.querySelectorAll('.timeline-item');
+      let scrollTop = timeline.scrollTop;
+
+      items.forEach(item => {
+        item.style.transform = `translateY(${scrollTop}px)`;
+      });
+    }
+  </script>
+
+</body>
+</html>

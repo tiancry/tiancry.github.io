@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>DZW</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+  <!-- Add custom CSS here -->
+  <style>
+    .nav-link:hover {
+      border-bottom: 2px solid #007BFF;
+      transition: all .2s;
+    }
+    .card-img-top {
+      width: 100%;
+      height: 15vw;
+      object-fit: contain;
+    }
+    .card-img-top2 {
+      width: 100%;
+      height: 15vw;
+      object-fit: contain;
+    }
+    .navbar-nav {
+      margin: 0 auto;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="/">道虽迩，不行不至；事虽小，不为不成</a>
+    <div class="navbar-nav">
+      <a class="nav-item nav-link active" href="/">首页 <span class="sr-only">(current)</span></a>
+      <a class="nav-item nav-link" href="/history">阅读</a>
+      <a class="nav-item nav-link" href="/architecture">设计</a>
+      <a class="nav-item nav-link" href="/life">生活</a>
+    </div>
+  </nav>
+
+  <div class="container mt-5">
+    <h1 class="mb-4">欢迎来到我的博客！</h1>
+
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card">
+          <img src="{{ url_for('static', filename='images/history.png') }}" class="card-img-top" alt="历史">
+          <div class="card-body">
+            <h5 class="card-title">阅读</h5>
+            <p class="card-text">阅读是最低成本的教育</p>
+            <a href="/history" class="btn btn-primary">查看更多 &raquo;</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <img src="{{ url_for('static', filename='images/architecture.jpg') }}" class="card-img-top" alt="建筑">
+          <div class="card-body">
+            <h5 class="card-title">设计</h5>
+            <p class="card-text">建筑，不止建筑</p>
+            <a href="/architecture" class="btn btn-primary">查看更多 &raquo;</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <img src="{{ url_for('static', filename='images/life.jpg') }}" class="card-img-top" alt="生活">
+          <div class="card-body">
+            <h5 class="card-title">生活</h5>
+            <p class="card-text">拓宽人生的广度</p>
+            <a href="/life" class="btn btn-primary">查看更多 &raquo;</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <h2 class="mt-5">作品展示</h2>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card">
+          <img src="{{ url_for('static', filename='images/读书日志.png') }}" class="card-img-top2" alt="Work 1">
+          <div class="card-body">
+            <h5 class="card-title">读书日志</h5>
+            <a href="/work1" class="btn btn-primary">查看详情 &raquo;</a>
+          </div>
+        </div>
+      </div>
+      <!-- Add more works here -->
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+</body>
+</html>
